@@ -1,2 +1,2 @@
-# Learn-Everything
-Learning Resource
+# HabiFix
+Fix your Habits
