@@ -1,7 +1,3 @@
-const Homepage = ({ loggedIn }) => {
-  return (
-    <div className="home-lobby-err-page">
-      {loggedIn ? <h1>Welcome back, Hanmin!</h1> : <h1>Welcome</h1>}
 import { useEffect, useState, useRef } from 'react';
 import spinner from '../images/loader.gif';
 import VerticalBar from '../components/VerticalBar';
@@ -42,3 +38,4 @@ const UserDashBoard = () => {
 };
 
 export default UserDashBoard;
+
