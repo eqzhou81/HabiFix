@@ -1,0 +1,12 @@
+{
+  "phone": {
+    "nCount": 5,
+    "nDuration": 10,
+    "cDuration": 5
+  },
+  "sitting": {
+    "nCount": 2,
+    "nDuration": 50,
+    "cDuration": 10
+  }
+}
