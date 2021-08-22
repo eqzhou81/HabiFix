@@ -2,7 +2,7 @@ import { Bar } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 import { useEffect, useState, useRef } from 'react';
 
-const VerticalBar = ({ userData }) => {
+const VerticalBarDailyCount = ({ userData }) => {
   const [graphLabels, setGraphLabels] = useState([]);
   const [graphCounts, setGraphCounts] = useState([]);
   useEffect(() => {
@@ -42,15 +42,6 @@ const VerticalBar = ({ userData }) => {
     ],
   };
 
-  let today = new Date();
-  const options = {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  };
-  today = today.toLocaleDateString('en-US', options);
-
   const graphOptions = {
     scales: {
       x: {
@@ -74,10 +65,8 @@ const VerticalBar = ({ userData }) => {
 
   return (
     <div>
-      <div className="header">
-        <h1 className="title">Daily record for {today}</h1>
-      </div>
       <div className="bar-graph-container">
+        <h2>Number of times recorded per activity</h2>
         {graphLabels.length === Object.keys(userData).length && (
           <Bar data={data} options={graphOptions} />
         )}
@@ -86,4 +75,4 @@ const VerticalBar = ({ userData }) => {
   );
 };
 
-export default VerticalBar;
+export default VerticalBarDailyCount;
