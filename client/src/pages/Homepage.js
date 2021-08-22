@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import graph from '../images/trend.png';
 
-const Homepage = () => {
+
+
+const Homepage = ({ loggedIn }) => {
   return (
     <div className="main">
       <div className="home-lobby-err-page">
-        <h1>Welcome!</h1>
+        {loggedIn ? <h1>Welcome back, Hanmin!</h1> : <h1>Welcome</h1>}
         <p className="successful">Successful people are simply those with successful habits.</p>
         <p className="start"><b>Start forming good habits now!</b></p>
         <br/>
