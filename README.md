@@ -28,13 +28,13 @@ In the future, we hope to add to our list of habits that we can detect, and poss
 
 ### Technologies used
 
-Python
-HTML
-CSS
-Javascript
-React.js
-Tensorflow
-Flask
-OpenCV
-Cockroach DB
-Github
+Python  
+HTML  
+CSS  
+Javascript  
+React.js  
+Tensorflow  
+Flask  
+OpenCV  
+Cockroach DB  
+Github  
