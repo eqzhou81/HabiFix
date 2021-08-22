@@ -198,8 +198,6 @@ footer {
 
 
 
-
-const Navbar = ({ loggedIn }) => {
 .sign-up-or-login form {
   width: 360px;
   margin: 100px auto 0;
