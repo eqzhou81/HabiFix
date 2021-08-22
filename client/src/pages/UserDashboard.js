@@ -1,13 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import UserReport from '../components/UserReport';
 import spinner from '../images/loader.gif';
-import Chart from 'chart.js/auto';
-import VerticalBar from '../components/VerticalBar';
 const UserDashBoard = () => {
-  const [userData, setUserData] = useState({});
-  const [loading, setLoading] = useState();
-  const [timer, setTimer] = useState(0);
-  const canvasRef = useRef();
+  const [userData, setUserData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -15,11 +11,11 @@ const UserDashBoard = () => {
       fetch('/api')
         .then((res) => res.json())
         .then((data) => {
-          setUserData(data);
+          setUserData(data.members);
           setLoading(false);
         })
         .catch((err) => console.log(err));
-    }, 5000);
+    }, 500000);
   }, []);
 
   console.log(userData);
@@ -33,21 +29,12 @@ const UserDashBoard = () => {
           <p>Please wait as we generate a report of your habits</p>
         </div>
       ) : (
-        Object.keys(userData).length > 0 && <VerticalBar userData={userData} />
-        // <div className="habit-card-containers">
-        //   {Object.keys(userData).length > 0 &&
-        //     Object.keys(userData).map((habit) => (
-        //       <span>
-        //         <div className="habit-card">
-        //           <p>
-        //             <bold>{habit}</bold>
-        //           </p>
-        //           <p>count: {userData[habit].nCount}</p>
-        //           <p>duration: {userData[habit].nDuration}</p>
-        //         </div>
-        //       </span>
-        //     ))}
-        // </div>
+        userData.map((member) => (
+          <p>
+            name : {member.className} age: {member.age}
+          </p>
+        ))
+        // <UserReport/>
       )}
     </div>
   );
