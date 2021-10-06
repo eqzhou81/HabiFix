@@ -142,6 +142,9 @@ h1.title {
   text-align: center;
 }
 
+.bar-graph-container label {
+  color: red;
+}
 /* graphs */
 .daily-graphs {
   display: flex;
@@ -156,10 +159,6 @@ h1.title {
   height: 30vh;
   width: 40vw;
   margin: 0 50px;
-}
-
-.bar-graph-container label {
-  color: red;
 }
 
 .weekly-container {
