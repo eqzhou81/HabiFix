@@ -1,12 +1,1 @@
-{
-  "phone": {
-    "nCount": 5,
-    "nDuration": 10,
-    "cDuration": 5
-  },
-  "sitting": {
-    "nCount": 2,
-    "nDuration": 50,
-    "cDuration": 10
-  }
-}
+{"phone": {"nCount": 6, "nDuration": 27.722842, "cDuration": 0}, "junkfood": {"nCount": 0, "nDuration": 0, "cDuration": 0}, "sitting": {"nCount": 1, "nDuration": 184.31352699999985, "cDuration": 184.31352699999985}, "water": {"nCount": 0, "nDuration": 0, "cDuration": 0}}
